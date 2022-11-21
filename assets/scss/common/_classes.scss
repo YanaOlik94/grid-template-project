@@ -2,16 +2,34 @@
 @use "../mixins" as *;
 
 .btn {
-    width: 250px;
+     box-sizing: border-box;
     height: 60px;
-    background-color: rgba($color-light, 0.1);
-    border: 2px solid #ffffff;
-    // padding: 0.5em 1em;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0.5em 1em;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.125rem;
     letter-spacing: 0.1em;
+    transition: background-color 0.5s;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+    }
+
+    &--light {
+      background-color: rgba($color-light, 0.1);
+      border-color: $color-light;
+      width: 250px;
+    }
+
+    &--primary {
+      background-color: rgba($color-primary, 0.8);
+      border-color: $color-primary;
+      width: 350px;
+    }
 }
 
 .visually-hidden {
