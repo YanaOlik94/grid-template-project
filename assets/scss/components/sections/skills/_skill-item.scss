@@ -1,50 +1,64 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-
 *,
 *::before *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .skill-item {
-  box-sizing: border-box;
   position: relative;
+
   overflow: hidden;
 
+  box-sizing: border-box;
+
   &__title {
-    @include abs-position;
     z-index: 1;
+
     margin: 0;
 
-    font-size: 1.25rem;
     letter-spacing: 0.1em;
+
+    @include abs-position;
+    @include lg-min {
+      font-size: 1.25rem;
+    }
+    @include lg {
+      font-size: 1.125rem;
+    }
   }
 
   &__link {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: $gap;
+
+    box-sizing: border-box;
     // padding: 1px;
     height: 100%;
+    padding: $gap;
+
     transition: color 0.5s;
   }
 
   &__image {
-    @include abs-position;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-color: $color-primary;
     transition: transform 0.5s;
+
+    background-color: $color-primary;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @include abs-position;
   }
 
   &__overlay {
-    @include abs-position;
+    transition: opacity 0.5s;
+
     opacity: 0.8;
     background-color: $color-primary;
-    transition: opacity 0.5s;
+
+    @include abs-position;
   }
 
   &:hover {
@@ -58,7 +72,6 @@
       transform: scale(1.1);
     }
   }
-
 }
 
 @for $i from 1 through 9 {
@@ -66,4 +79,3 @@
     grid-area: a#{$i};
   }
 }
-

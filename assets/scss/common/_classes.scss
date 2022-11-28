@@ -2,34 +2,58 @@
 @use "../mixins" as *;
 
 .btn {
-     box-sizing: border-box;
-    height: 60px;
-    border-width: 2px;
-    border-style: solid;
-    padding: 0.5em 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.125rem;
-    letter-spacing: 0.1em;
-    transition: background-color 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &:hover,
-    &:focus {
-      background-color: $color-accent;
-    }
+  padding: 0.5em 1em;
 
-    &--light {
-      background-color: rgba($color-light, 0.1);
-      border-color: $color-light;
+  transition: background-color 0.5s;
+  letter-spacing: 0.1em;
+
+  border-width: 2px;
+  border-style: solid;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+
+  &--light {
+    border-color: $color-light;
+    background-color: rgba($color-light, 0.1);
+
+    @include lg-min {
       width: 250px;
-    }
+      height: 60px;
 
-    &--primary {
-      background-color: rgba($color-primary, 0.8);
-      border-color: $color-primary;
+      font-size: 1.125rem;
+    }
+    @include lg-md {
+      width: 200px;
+      height: 50px;
+    }
+    @include md {
+      width: 170px;
+      height: 40px;
+    }
+  }
+
+  &--primary {
+    height: 60px;
+
+    border-color: $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
+    font-size: 1.125rem;
+
+    @include sm-min {
       width: 350px;
     }
+    @include sm {
+      width: 100%;
+    }
+  }
 }
 
 .visually-hidden {
