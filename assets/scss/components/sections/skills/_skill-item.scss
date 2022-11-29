@@ -11,8 +11,6 @@
 
   overflow: hidden;
 
-  box-sizing: border-box;
-
   &__title {
     z-index: 1;
 
@@ -21,11 +19,8 @@
     letter-spacing: 0.1em;
 
     @include abs-position;
-    @include lg-min {
+    @include md-min {
       font-size: 1.25rem;
-    }
-    @include lg {
-      font-size: 1.125rem;
     }
   }
 
@@ -35,7 +30,6 @@
     justify-content: center;
 
     box-sizing: border-box;
-    // padding: 1px;
     height: 100%;
     padding: $gap;
 
