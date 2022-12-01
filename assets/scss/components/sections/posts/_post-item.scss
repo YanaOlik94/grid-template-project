@@ -1,0 +1,67 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.post-item {
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+
+  &__link {
+    display: grid;
+    overflow: hidden;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+  }
+
+  &__image {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: $color-primary;
+
+    img {
+      width: 100%;
+      transition: transform 0.5s;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    display: grid;
+    align-content: center;
+    padding: 20px;
+
+    h3 {
+      font-family: $font-header;
+      letter-spacing: 0.05em;
+      font-size: 1.125rem;
+      text-align: center;
+      color: $color-gray;
+      transition: color 0.5s;
+    }
+
+    p {
+      color: $color-gray;
+      text-align: center;
+      transition: color 0.5s;
+    }
+  }
+
+  &:hover {
+    background-color: #d8d8d8;
+
+    .post-item__image img {
+      transform: scale(1.1);
+    }
+
+    .post-item__description h3,
+    .post-item__description p {
+      color: #2d3651;
+    }
+  }
+}
+
+@for $i from 1 through 6 {
+  .post-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}

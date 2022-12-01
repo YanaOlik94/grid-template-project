@@ -3,13 +3,12 @@
 
 .form-item {
   &__input {
-    border: 2px;
     display: block;
     width: 100%;
     height: 60px;
     padding-right: 60px;
     padding-left: 30px;
-    letter-spacing: 0.125rem;
+    letter-spacing: 0.15em;
     font-size: 1.125rem;
     color: $color-light;
     transition: background-color 0.5s, border-color 0.5s;
@@ -24,6 +23,14 @@
       border-bottom-color: $color-light;
       background-color: rgba(255, 255, 255, 0.15);
       outline: none;
+
+      &::placeholder {
+        color: #8c9bab;
+      }
+    }
+
+    &::placeholder {
+      color: $color-gray;
     }
   }
 }
