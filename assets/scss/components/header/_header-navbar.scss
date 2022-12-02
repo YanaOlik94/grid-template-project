@@ -3,6 +3,7 @@
 
 .header-navbar {
   display: grid;
+  align-items: center;
 
   justify-items: end;
 
@@ -92,7 +93,6 @@
       right: $gap;
 
       display: none;
-      display: block;
 
       background-color: rgba($color-gray-dark, 0.95);
 
@@ -101,15 +101,11 @@
     }
   }
 
-  &__item {
-    margin: $gap $gap-sm;
-  }
-
   &__link {
     display: block;
 
     transition: color 0.25s;
-    letter-spacing: 0.088em;
+    letter-spacing: 0.1em;
 
     font-size: 1.125rem;
 

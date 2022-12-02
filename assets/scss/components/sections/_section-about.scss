@@ -3,6 +3,7 @@
 
 .about {
   letter-spacing: 0.055em;
+
   background-color: $color-gray-light;
 
   @include lg-min {
@@ -20,24 +21,31 @@
 
   h2 {
     margin-top: 0;
+
     letter-spacing: 0.1em;
+
     color: #2d3651;
+
     line-height: 1.2em;
 
     @include lg-md {
       margin-bottom: 2.625rem;
+
       font-size: 2rem;
     }
     @include lg-min {
       margin-bottom: 3rem;
+
       font-size: 2.5rem;
     }
     @include md-sm {
       margin-bottom: 2.25rem;
+
       font-size: 1.5rem;
     }
     @include sm {
       margin-bottom: 2.25rem;
+
       text-align: center;
     }
   }
@@ -45,6 +53,7 @@
   &__image {
     display: grid;
     align-content: center;
+
     justify-items: center;
 
     img {
@@ -63,6 +72,7 @@
 
   &__content p:first-of-type {
     position: relative;
+
     margin-top: -5px;
   }
 
@@ -72,7 +82,9 @@
 
     width: 2px;
     height: 200px;
+
     content: "";
+
     background-color: rgba(99, 117, 136, 0.1);
 
     @include lg-min {
@@ -94,9 +106,9 @@
   }
 
   &__container {
-    @extend %container;
     display: grid;
 
+    @extend %container;
     @include lg-min {
       gap: $gap-x5;
       grid-template-columns: 1fr 271px;

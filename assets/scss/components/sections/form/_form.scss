@@ -3,17 +3,17 @@
 
 .form {
   padding: 30px 0;
+
   background-color: $color-primary;
 
   &__container {
-    @extend %container;
     display: grid;
-    gap: $gap;
 
+    @extend %container;
+    gap: $gap;
     @include md-min {
       grid-template-columns: repeat(3, 1fr);
     }
-
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -21,7 +21,9 @@
 
   .btn--primary {
     width: 100%;
+
     cursor: pointer;
+
     color: $color-light;
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -31,6 +33,7 @@
   .btn--primary:hover,
   .btn--primary:focus {
     cursor: pointer;
+
     border-color: $color-light;
     background-color: $color-accent;
   }
