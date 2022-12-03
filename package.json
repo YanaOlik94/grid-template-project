@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "editorconfig": "editorconfig-checker -exclude libs|css"
+    "editorconfig": "editorconfig-checker -exclude libs"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
