@@ -2,9 +2,8 @@
 @use "../../../mixins" as *;
 
 .post-item {
-  transition: background-color 0.5s;
-
   background-color: #f2f2f2;
+  transition: background-color 0.5s;
 
   &__link {
     display: grid;
@@ -38,21 +37,15 @@
     padding: 20px;
 
     h3 {
-      transition: color 0.5s;
       text-align: center;
-      letter-spacing: 0.05em;
-
-      color: $color-gray;
-
       font-family: $font-header;
-      font-size: 1.125rem;
+      transition: color 0.5s;
     }
 
     p {
-      transition: color 0.5s;
       text-align: center;
-
       color: $color-gray;
+      transition: color 0.5s;
     }
   }
 
@@ -65,7 +58,7 @@
 
     .post-item__description h3,
     .post-item__description p {
-      color: #2d3651;
+      color: $color-primary;
     }
   }
 }

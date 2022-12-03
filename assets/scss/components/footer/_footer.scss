@@ -19,19 +19,18 @@
     display: grid;
     justify-content: center;
 
-    margin-bottom: 40px;
+    margin-bottom: $gap-x2;
 
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
     &::after {
+      content: "";
       position: absolute;
-      bottom: -20px;
+      bottom: -$gap;
       left: calc(50% - 37.5px);
 
       width: 75px;
       height: 2px;
-
-      content: "";
 
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -43,30 +42,26 @@
     flex-direction: column;
 
     span:nth-of-type(1) {
-      margin-right: -0.5em;
-
+      margin-right: -8px;
       letter-spacing: 0.33em;
-
       font-weight: 100;
     }
 
     span:nth-of-type(2) {
       letter-spacing: 0.05em;
-
       color: #e5e5e5;
-
       font-weight: 700;
     }
   }
 }
 
 .social-link {
-  padding: 7.3px 10px;
-
+  padding: $gap-sm;
   transition: color 0.5s;
 
-  font-size: 2.25rem;
-
+  .fab {
+    font-size: 2.25rem;
+  }
   &:hover {
     color: $color-accent;
   }
