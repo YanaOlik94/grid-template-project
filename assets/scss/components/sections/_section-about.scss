@@ -21,10 +21,12 @@
 
   h2 {
     margin-top: 0;
-    letter-spacing: 0.1em;
-    line-height: 1.2em;
 
-    color: #2d3651;
+    letter-spacing: 0.1em;
+
+    color: $color-primary;
+
+    line-height: 1.2em;
 
     @include lg-md {
       margin-bottom: 2.625rem;
@@ -51,6 +53,7 @@
   &__image {
     display: grid;
     align-content: center;
+
     justify-items: center;
 
     img {
@@ -60,7 +63,7 @@
   }
 
   &__content p {
-    color: #637588;
+    color: $color-gray;
 
     @include lg-min {
       font-size: 1.125rem;
@@ -82,7 +85,8 @@
 
     content: "";
 
-    background-color: rgba(99, 117, 136, 0.1);
+    background-color: $color-gray;
+    opacity: 0.1;
 
     @include lg-min {
       right: -50px;
