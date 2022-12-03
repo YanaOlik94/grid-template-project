@@ -2,7 +2,6 @@
 @use "../../mixins" as *;
 
 .footer {
-  box-sizing: border-box;
   padding: $gap * 2.5 $gap $gap * 3.5;
 
   text-align: center;

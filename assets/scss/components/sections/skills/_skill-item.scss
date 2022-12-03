@@ -1,11 +1,6 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-*,
-*::before *::after {
-  box-sizing: border-box;
-}
-
 .skill-item {
   position: relative;
 
@@ -29,7 +24,6 @@
     align-items: center;
     justify-content: center;
 
-    box-sizing: border-box;
     height: 100%;
     padding: $gap;
 
